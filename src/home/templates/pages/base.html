@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{% block title %} {% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'cssCustom.css' %}" />
   </head>
 
   <body>
-    <h1>Content</h1>
-    {% block content %} {% endblock content %}
+    <div class="container-fluid topContent">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{% static 'images/ima.jpg' %}" class="ima-fluid" style="max-height: 150px" />
+        </div>
+        <div class="col-md-10">
+          <section>
+            <center><h1>Hello Python</h1></center>
+          </section>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-2">
+          <ul class="nav flex-column badge badge-light ">
+            <li class="nav-item"><a class="nav-link active" href="/">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact/">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-10">{% block content %} {% endblock content %}</div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-fluid"><a href="#">FaceBook</a>| <a href="#">Twitter</a>| <a href="#">Google</a></div>
+    </footer>
   </body>
 </html>

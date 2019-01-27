@@ -10,3 +10,9 @@ def index(request):
     # response.write('Đây là app home')
     # return response
     return render(request, 'pages/home.html')
+
+
+def about(request): return render(request, 'pages/about.html')
+
+
+def blogs(request): return render(request, 'pages/blogs.html')
