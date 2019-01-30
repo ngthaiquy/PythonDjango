@@ -15,4 +15,4 @@ def index(request):
 def about(request): return render(request, 'pages/about.html')
 
 
-def blogs(request): return render(request, 'pages/blogs.html')
+# def blogs(request): return render(request, 'pages/blogs.html')
