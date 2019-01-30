@@ -27,8 +27,8 @@
         <div class="col-md-2">
           <ul class="nav flex-column badge badge-light ">
             <li class="nav-item"><a class="nav-link active" href="/">Profile</a></li>
-            <li class="nav-item"><a class="nav-link" href="/contact/">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">About</a></li>
+            <li class="nav-item"><a class="nav-link" href=" {% url 'blog' %} ">Blog</a></li>
           </ul>
         </div>
         <div class="col-md-10">{% block content %} {% endblock content %}</div>

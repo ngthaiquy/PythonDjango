@@ -5,7 +5,7 @@
 {% block content %}
 {% for post in Post %}
     <h4>{{post.date| date:"d-m-y"}}
-    <a href="/blog/{{post.id}}" target="_blank" rel="noopener noreferrer"> {{post.title}} </a>
+    <a href=" {% url 'post' post.id %} " target="_blank" rel="noopener noreferrer"> {{post.title}} </a>
     </h4>
 
 {% endfor %}
